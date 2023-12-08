@@ -12,6 +12,7 @@
 }
 
 body {
+  position: relative;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -31,13 +32,62 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+header {
+  width: 100%;
+  height: 40px;
+  background-color: var(--dunkelblau);
+  position: relative;
+  top: 0;
+  display: flex;
+  box-shadow: 0px 0px 10px 0px;
+}
+
+header a {
+  display: flex;
+  text-decoration: none;
+}
+
+header a:hover {
+  cursor: pointer;
+}
+
+header p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  color: #E5430F;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.turtle {
+  margin: 0 5px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  background-color: #E5430F;
+  border-radius: 50%;
+}
 h1 {
   text-align: center;
-  margin: 40px;
   font-size: 3rem;
-  text-decoration: underline dashed;
-  text-underline-offset: 12px;
-  color: var(--orange);
+  font-weight: bold;
+  color: cornsilk;
+  margin: 15px;
+  /* position: relative; */
+  top: 50px;
+}
+
+.tag {
+  color: #E5430F;
+  font-size: 3.5rem;
+  padding: 0 5px;
+  position: relative;
+  top: 3px;
 }
 
 .about_me_first {
@@ -46,14 +96,14 @@ h1 {
   grid-template-rows: 1fr 1fr;
   gap: 20px;
   place-items: center;
-  height: 75%;
+  height: 70%;
   width: 80%;
   position: absolute;
-  top: 100px;
+  top: 160px;
   right: 0;
   left: 0;
-  bottom: 0;
-  margin: auto;
+  bottom: 50px;
+  margin: 0 auto 50px auto;
   /* z-index: 1; */
 }
 
@@ -64,14 +114,14 @@ h1 {
   grid-template-rows: 1fr 1fr;
   gap: 20px;
   place-items: center;
-  height: 75%;
+  height: 70%;
   width: 80%;
   position: absolute;
-  top: 100px;
+  top: 160px;
   right: 0;
   left: 0;
   bottom: 0;
-  margin: auto;
+  margin: 0 auto 50px auto;
 }
 
 .first_tiles {
@@ -83,18 +133,21 @@ h1 {
   background-color: var(--orange);
   border-radius: 50px;
   opacity: 100%;
-  transition-duration: 1.5s;
+  transition-duration: 0.5s;
+  box-shadow: 0px 0px 3px 4px rgba(0, 0, 0, 0.75);
 }
 
 .first_tiles:hover {
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   opacity: 0%;
+  cursor: pointer;
 }
 
 .first_tile_box_text {
   color: cornsilk;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .second_tiles {
@@ -107,6 +160,7 @@ h1 {
   border-radius: 50px;
   opacity: 0%;
   transition-duration: 1.5s;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.75);
 }
 
 .second_tiles:hover {
@@ -114,6 +168,14 @@ h1 {
   transition-duration: 1.5s;
   transition-timing-function: ease-in-out;
   opacity: 100%;
+  cursor: pointer;
+}
+
+.second_tile_box_text {
+  font-family: "Oswald", sans-serif;
+  color: cornsilk;
+  font-size: 1.5rem;
+  line-height: 2;
 }
 
 .serious_me {
@@ -122,4 +184,33 @@ h1 {
   letter-spacing: 0px;
   text-align: left;
   line-height: 3;
+}
+
+.see_me {
+  background-image: url(Profilbild.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: var(--dunkelblau);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  box-shadow: 0px 0px 10px 0px;
+}
+
+footer p {
+  color: #E5430F;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: right;
+  padding-right: 20px;
+  position: relative;
+  transform: translateY(50%);
 }
